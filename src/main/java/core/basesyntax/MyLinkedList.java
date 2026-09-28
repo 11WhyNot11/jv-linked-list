@@ -77,7 +77,7 @@ public class MyLinkedList<T> implements MyLinkedListInterface<T> {
     @Override
     public T remove(int index) {
         Node<T> node = getNode(index);
-        T removedValue = node.value;
+        final T removedValue = node.value;
 
         if (node.prev == null) {
             head = node.next;
